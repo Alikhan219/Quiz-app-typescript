@@ -2,8 +2,14 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
- import React from "react"
-function App() {
+ 
+const App =( ) => {
+  const startTrivia= async()=> {
+
+  }
+  const checkAnswer= (e: React.MouseEvent<HTMLButtonElement>)=>{
+
+  }
   return (
     <div>Quiz</div>
   );
