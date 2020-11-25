@@ -1,8 +1,8 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
- 
+import React from 'react';
+
+
+
 const App =( ) => {
   const startTrivia= async()=> {
 
@@ -10,8 +10,21 @@ const App =( ) => {
   const checkAnswer= (e: React.MouseEvent<HTMLButtonElement>)=>{
 
   }
+
+  const nextQuestion = ()=>{
+
+  }
   return (
-    <div>Quiz</div>
+
+    <div>
+
+     <h1>REACT QUIZ</h1>
+     <button className="start" onClick={startTrivia}>
+       Start
+     </button>
+<p className="score">Score:</p>
+<p>Loading Question ...</p>
+      </div>
   );
 }
 
