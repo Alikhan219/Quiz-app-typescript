@@ -4,9 +4,16 @@ type props ={
     answer: string[];
     callback: any;
     userAnswer:string;
-    questionNr:
+    questionNr: number;
+    totalQuestions: number;
 }
-const QuestionCard =()=> (<div>Question Card</div>
+const QuestionCard: React.FC<props> =({ 
+    question,
+    answer,
+    callback,
+    userAnswer,
+    questionNr,
+    totalQuestions})=> (<div>Question Card</div>
     )
 
 
