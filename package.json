@@ -22,7 +22,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prestart": "copy .\\verifyTypeScriptSetup.js .\\node_modules\\react-scripts\\scripts\\utils\\verifyTypeScriptSetup.js"
   },
   "eslintConfig": {
     "extends": [
