@@ -12,7 +12,7 @@ export type Question=
 
 }
 
-export type QuestionState= Question & {answers: string[]};
+export type QuestionState= Question & {answer: string[]};
 
 
 
