@@ -4,10 +4,10 @@ type props ={
     question: string;
     answers: string[];
     callback: (e: React.MouseEvent<HTMLButtonElement>)=> void;
-    userAnswer: AnswerObject / undefined;
+    userAnswer: AnswerObject |undefined ;
     questionNr: number;
     totalQuestions: number;
-}
+};
 const QuestionCard: React.FC<props> =({ 
     question,
     answers,

@@ -1,12 +1,14 @@
 
 
 import React, { useState } from 'react';
-
+import {fetchQuizQuestions} from "./API";
+// Components
 import QuestionCard from "./components/QuestionCard";
 
-import {fetchQuizQuestions} from "./API";
+//Types
 import {QuestionState, Difficulty} from "./API"
-
+//Styles
+import{ GlobalStyle} from "./App.styles"
 export type AnswerObject={
    question: string;
    answer: string;
@@ -69,15 +71,16 @@ const [gameOver, setGameOver] = useState(true)
   }
   
   return (
-
-    <div>
+   <>
+   <GlobalStyle />
+    <div className="App">
 
      <h1>REACT QUIZ</h1>
 {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
      <button className="start" onClick={startTrivia}>
        Start
      </button> ) : null } 
-{!gameOver ? <p className="score">Score:</p> :null}
+{!gameOver ? <p className="score">Score: {score}</p> :null}
 {loading && <p>Loading Question ...</p>}
 
 {console.log("questions: ", questions)}
@@ -99,6 +102,7 @@ callback={checkAnswer}
 ) :null}
 
       </div>
+      </>
   );
 }
 
